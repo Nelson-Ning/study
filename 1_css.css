@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#menu li{
+    background: red;
+    float: left;
+    list-style: none;
+    height: 60px;
+    width: 200px;
+    margin-right: 5px;
+    text-align: center;
+
+}
+#menu a:hover{
+    background: greenyellow;
+}
+#menu a{
+    width:200px;
+    height: 60px;
+    text-decoration: none;
+    display: block;
+    line-height: 60px;
+    color: white;
+}
