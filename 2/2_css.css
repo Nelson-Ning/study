@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+      background:red;
+      list-style: none;
+      height: 40px;
+      width: 200px;
+      margin-bottom: 5px;
+      text-align: center;
+  }
+
+#menu a{
+    width:200px;
+    height: 40px;
+    text-decoration: none;
+    display: block;
+    line-height: 40px;
+    color: white;
+}
+
+#menu a:hover{
+    background:yellow;
+
+}
+
