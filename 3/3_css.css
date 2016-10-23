@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+#menu .main-menu{
+    background-color:darkgrey;
+    float: left;
+    width: 100px;
+    height: 50px;
+    margin-right: 5px;
+}
+
+#menu .main-menu a{
+    width:100px;
+    height:50px;
+    display: block;
+    text-align:center;
+    line-height: 50px;
+}
+
+#menu .sub-menu{
+    background-color:aliceblue;
+    display: none;
+
+}
+#menu .sub-menu li{
+    border-bottom: 1px dashed #000;
+}
+#menu .sub-menu a{
+    display: block;
+    text-align: left;
+    text-indent: 5px;
+    line-height: 50px;
+
+}
+#menu .sub-menu a:hover{
+    background-color:darkgrey;
+}
