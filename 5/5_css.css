@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+#container {
+    width: 615px;
+    height: 500px;
+    background: #cccccc;
+    margin: 80px auto;
+}
+#tab li{
+    width: 200px;
+    height: 100px;
+    float: left;
+    margin-right: 5px;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+}
+#tab{
+    overflow: hidden;
+}
+#sub{
+    background: #999;
+    height:400px;
+    
+}
+
+#tab li.selected{
+    background: blanchedalmond;
+}
