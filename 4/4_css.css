@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+#menu .main_menu{
+    width: 100px;
+    background-color:darkgrey;
+
+}
+
+#menu .main_menu a{
+    width: 100px;
+    text-align: center;
+    line-height: 50px;
+    display: block;
+    ;
+]}
+
+#menu .sub_menu{
+    background-color:aliceblue;
+    display: none;
+}
+
+#menu .sub_menu li{
+    border-bottom: 1px dashed #000;
+}
+
+#menu h3{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color:#fff;
+}
