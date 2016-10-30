@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>滑动轮播图</title>
+    <link rel="stylesheet" href="7_css.css">
+</head>
+<body>
+<div id="contioner">
+    <ul id="tab">
+        <li class="selected">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <div id="content">
+        <img src="img/1.jpg">
+        <img src="img/2.jpg">
+        <img src="img/3.jpg">
+        <img src="img/4.jpg">
+    </div>
+    <div id="arrow">
+        <span id="syg">&lt;</span>
+        <span id="next">&gt;</span>
+    </div>
+</div>
+</body>
+<script src="jslib.js"></script>
+<script>
+    window.onload = function(){
+        var oContioner = document.getElementById('contioner');
+        var oContent=document.getElementById("content")
+        var aLi = oContioner.getElementsByTagName('li');
+        var aImg = oContioner.getElementsByTagName('img');
+        var oNext = document.getElementById('next');
+        var osyg = document.getElementById('syg');
+        var iNow = 0;
+        var timer;
+        oContent.style.width=aImg[0].offsetWidth * (aImg.length)+"px";
+        console.log(aImg[0].offsetWidth);
+        for (var i = 0; i < aLi.length; i++) {
+            aLi[i].index = i;
+            aLi[i].onmouseover = function () {
+                changeimg(this.index);
+
+                iNow = this.index
+            }
+
+        }
+        function changeimg(index) {
+            for (var i = 0; i < aLi.length; i++) {
+                aLi[i].className = '';
+            }
+            aLi[index].className = 'selected';
+            animate(oContent,{left:-aImg[0].offsetWidth * index});
+         /*   oContent.style.left= -aImg[0].offsetWidth * index+"px";*/
+        }
+        oNext.onclick = function () {
+            iNow++;
+            iNow = iNow % aLi.length;
+            changeimg(iNow);
+        }
+        osyg.onclick = function () {
+            iNow--;
+            if (iNow < 0) {
+                iNow = aLi.length - 1;
+            }
+            changeimg(iNow);
+        }
+
+        timer = setInterval(function () {
+            oNext.onclick();
+        }, 1500)
+        oContioner.onmouseover = function () {
+            clearTimeout(timer);
+        }
+        oContioner.onmouseout = function () {
+            timer = setInterval(function () {
+                oNext.onclick();
+            },1500)
+        }
+    };
+
+</script>
+<html/>
