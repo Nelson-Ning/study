@@ -21,23 +21,24 @@
 <div id="drag"></div>
 <script>
     (function(){
-        var oDrag=document.getElementById('drag');
+        var oDrag=document.getElementById("drag");
         oDrag.onmousedown=function(e){
             e=e||window.event;
             var iDisX= e.clientX-oDrag.offsetLeft;
             var iDisY= e.clientY-oDrag.offsetTop;
             document.onmousemove=function(e){
                 e=e||window.event;
-                var left=e.clientX - iDisX;
-                var right=e.clientY - iDisY;
-                oDrag.style.left=left+"px";
-                oDrag.style.top=right+"px";
+                oDrag.style.left=(e.clientX - iDisX)+"px";
+                oDrag.style.top=(e.clientY - iDisY)+"px";
                 return false;
-            };
+                //用document的意义在于防止鼠标移动过快
+                //return false返回个假值防止<h1></h1>被选中
+            }
 
         };
         oDrag.onmouseup=function(){
             document.onmousemove=null;
+
 
         }
 
