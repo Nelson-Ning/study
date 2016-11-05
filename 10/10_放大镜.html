@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>放大镜</title>
+    <style>
+        img{
+            border: 0;;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #small{
+            width: 400px;
+            height: 225px;
+            float:left;
+        }
+        #small img{
+            width: 400px;
+            height: 225px;
+        }
+        #content{
+            width: 140px;
+            height: 140px;
+            position: absolute;
+            top:0;
+            background-color: mintcream;
+            opacity: .5;
+            display: none;
+        }
+        #big_pic{
+            width: 400px;
+            height: 225px;
+            position: relative;
+            top:0;
+            overflow: hidden;
+            float: left;
+            display: none;
+        }
+        #big_img{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div id="small">
+    <img src="img/small.jpg">
+    <div id="content"></div>
+    </div>
+
+    <div id="big_pic">
+        <img src="img/big.jpg" id="big_img">
+    </div>
+
+<script>
+    var OSmall=document.getElementById("small");
+    var OContent=document.getElementById("content");
+    var oBig=document.getElementById("big_pic");
+    var oBig_img=document.getElementById("big_img");
+    OSmall.onmousemove=function(e){
+        e=e||window.event;
+        OContent.style.display="block";
+        oBig.style.display="block";
+        var X= e.clientX-OSmall.offsetLeft-OContent.offsetWidth/2;
+        var Y= e.clientY-OSmall.offsetTop-OContent.offsetHeight/2;
+        if(X<0){
+            X=0;
+        }
+        if(Y<0){
+            Y=0;
+        }
+        var XMax=OSmall.offsetWidth-OContent.offsetWidth;
+        var YMax=OSmall.offsetHeight-OContent.offsetHeight;
+        if(X>XMax){
+            X=XMax;
+        }
+        if(Y>YMax){
+            Y=YMax;
+        }
+        OContent.style.top=Y+"px";
+        OContent.style.left=X+"px";
+        var scaleX=X/XMax;
+        var scaleY=Y/YMax;
+        var Big_XMax=-(oBig_img.offsetWidth-oBig.offsetWidth)*scaleX+"px";
+        var Big_YMax=-(oBig_img.offsetHeight-oBig.offsetHeight)*scaleY+"px";
+        oBig_img.style.top=Big_YMax;
+        oBig_img.style.left=Big_XMax;
+
+        OSmall.onmouseout=function(){
+
+            OContent.style.display="none";
+            oBig.style.display="none";
+
+
+        }    };
+
+
+</script>
+</body>
+</html>
