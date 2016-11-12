@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+
+    }
+    #container{
+        width: 1200px;
+        height: 800px;
+        margin: 0px auto;
+        position: relative;
+        overflow: hidden;
+
+    }
+     #left{
+         width: 50px;
+         height: 100px;
+         opacity: 0.4;
+         color: white;
+         font-size: 80px;
+         position: absolute;
+         left: 0;
+         top: 50%;
+         cursor: pointer;
+         text-align: center;
+
+     }
+    #right{
+        width: 50px;
+        height: 100px;
+        opacity: 0.4;
+        color: white;
+        font-size: 80px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        cursor: pointer;
+        text-align: center;
+    }
+    #left:hover{
+        opacity: 1;
+    }
+    #right:hover{
+        opacity: 1;
+    }
+    #spic{
+        width:850px;
+        height: 80px;
+       position: relative;
+        top: 85%;
+        left: 15%;
+
+    }
+    #spic img{
+        width: 120px;
+        height: 80px;
+        margin-right: 10px;
+        opacity: 0.4;
+    }
+    #content .selected {
+        display: block;
+    }
+    #content{
+
+    }
+    #content img{
+
+        display: none;
+    }
+    #spic .selected{
+        opacity: 1;
+
+    }
+</style>
+<body>
+    <div id="container">
+
+        <div id="spic">
+            <img class="selected" src="img/0 (1).jpg">
+            <img src="img/0 (2).jpg">
+            <img src="img/0 (3).jpg">
+            <img src="img/0 (4).jpg">
+            <img src="img/0 (5).jpg">
+            <img src="img/0 (6).jpg">
+        </div>
+    <div id="content">
+        <img class="selected" src="img/0 (1).jpg">
+        <img src="img/0 (2).jpg">
+        <img src="img/0 (3).jpg">
+        <img src="img/0 (4).jpg">
+        <img src="img/0 (5).jpg">
+        <img src="img/0 (6).jpg">
+      </div>
+
+        <span id="left">&lt;</span>
+        <span id="right">&gt;</span>
+    </div>
+    <script>
+      var oLeft =document.getElementById("left");
+      var oRight =document.getElementById("right");
+      var oContent =document.getElementById("content");
+      var oSImg=document.getElementById("spic");
+      var aImg=oContent.getElementsByTagName("img");
+      var aSImg=oSImg.getElementsByTagName("img");
+      var iNow=1;
+      var iZ=6;
+      var timer;
+      for(var i=0;i<aSImg.length;i++){
+          aSImg[i].index=i;
+          aSImg[i].className='';
+
+          aSImg[i].onmouseover=function(){
+              aSImg[this.index].className='selected';
+              aSImg[this.index].style.border="2px solid white"
+              changeimg(this.index);
+              clearInterval(timer);
+            }
+          aSImg[i].onmouseout=function(){
+              aSImg[this.index].style.border=""
+              aSImg[this.index].className='';
+              timer= setInterval(function(){
+                  oRight.onclick();
+              },1500)
+          }
+
+
+      }
+      function changeimg(index) {
+          for (var i = 0; i < aImg.length; i++) {
+              aImg[i].className = '';
+              aSImg[i].style.border='';
+              aSImg[i].className='';
+          }
+          aImg[index].className = 'selected';
+          aSImg[index].className='selected';
+          aSImg[index].style.border="2px solid white"
+      }
+      oRight.onclick = function () {
+          iNow++;
+          iNow = iNow % aImg.length;
+
+          changeimg(iNow);
+      }
+        oLeft.onclick=function(){
+            iNow--;
+             if (iNow < 0) {
+                iNow = aImg.length - 1;
+            }aSImg[iNow].className='selected';
+            changeimg(iNow);
+ }
+      timer= setInterval(function(){
+            oRight.onclick();
+        },1500)
+
+
+    </script>
+</body>
+
+</html>
