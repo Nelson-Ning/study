@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>form表单</title>
+</head>
+<body>
+<form>
+    <span>第一个数：</span>
+    <input type="text" id="one">
+    <span>第二个数：</span>
+    <input type="text" id="two">
+    <select id="suanfa">
+        <option value='+'>+</option>
+        <option value='-'>-</option>
+        <option value='*'>*</option>
+        <option value='/'>/</option>
+        <input type="button" value="计算" onclick="count()">
+        <span>结果：</span>
+        <input type="text" id="Z">
+    </select>
+</form>
+<script>
+    function  count() {
+        var oOne = document.getElementById('one');
+        var oTwo = document.getElementById('two');
+        var oZ = document.getElementById("Z");
+        var oS = document.getElementById("suanfa");
+        var aS = oS.value;
+        var sel = 0;
+        var iOne = parseInt(oOne.value);
+        var iTwo = parseInt(oTwo.value);
+
+        if ("0" <= iOne || iOne <= "9" && "0" <= iTwo || iTwo <= "9") {
+        switch (aS) {
+            case "+":
+                sel = iOne + iTwo;
+                break;
+            case "-":
+                sel = iOne - iTwo;
+                break;
+            case "*":
+                sel = iOne * iTwo;
+                break;
+            case "/":
+                sel = iOne / iTwo;
+                break;
+
+        }
+        }
+         else
+             alert("输入的字符非法");
+
+        oZ.value=sel;
+    }
+
+
+
+</script>
+</body>
+</html>
