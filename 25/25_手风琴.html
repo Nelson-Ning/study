@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>手风琴</title>
+    <style>
+     /*   弹性盒模型中含有图片无法进行分配
+                                    有问题*/
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            border: 1px solid;
+            width: 500px;
+            height: 250px;
+            margin:80px auto;
+            position: relative;
+            /*overflow: hidden;*/
+            display: -webkit-box;
+            -webkit-box-orient:horizontal;
+        }
+        #container > div{
+           /* -webkit-box-flex:1;*/
+            overflow: hidden;
+        }
+/*        #container > div > div{
+            position: absolute;
+            background: #000;
+            opacity: 0.6;
+            color: white;
+            font-size:15px;
+            /!*width: 90px;*!/
+            bottom: 0px;
+        }*/
+         #one{
+           -webkit-box-flex:1;
+         }
+        #two{
+            -webkit-box-flex:2;
+        }
+        #three{
+            -webkit-box-flex: 1;
+        }
+        #four{
+            -webkit-box-flex: 1;
+        }
+        #five{
+            -webkit-box-flex: 1;
+        }
+
+
+
+    </style>
+</head>
+<body>
+  <div id="container">
+      <div id="one">
+          <img src="img/1.jpg">
+        <!--  <div>1</div>-->
+      </div>
+      <div id="two">
+          <img src="img/2.jpg">
+         <!-- <div>2</div>-->
+      </div>
+      <div id="three">
+          <img src="img/3.jpg">
+         <!-- <div>3</div>-->
+      </div>
+      <div id="four">
+          <img src="img/4.jpg">
+         <!-- <div>4</div>-->
+      </div>
+      <div id="five">
+          <img src="img/5.jpg">
+         <!-- <div>5</div>-->
+      </div>
+
+  </div>
+</body>
+</html>
