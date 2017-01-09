@@ -1,16 +1,19 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-ul,ol{
+
+ul, ol {
     list-style: none;
 }
-#tab{
+
+#tab {
     position: absolute;
     right: 5px;
     bottom: 5px;
 }
-#tab li{
+
+#tab li {
     float: left;
     width: 20px;
     height: 20px;
@@ -20,28 +23,31 @@ ul,ol{
     color: white;
     cursor: pointer;
 }
-#content img{
-   display: none;
+
+#content img {
+    display: none;
 }
-#content .selected{
+
+#content .selected {
     display: block;
 }
-#contioner{
+
+#contioner {
     width: 444px;
     height: 250px;
     margin: 100px auto;
     background: #f00;
     position: relative;
 }
-#arrow{
+
+#arrow {
     position: absolute;
     left: 5px;
     bottom: 5px;
     cursor: pointer;
 }
 
-
-#arrow span{
+#arrow span {
     float: left;
     background: black;
     text-align: center;
@@ -50,7 +56,8 @@ ul,ol{
     width: 20px;
     height: 20px;
 }
-#tab li.selected{
+
+#tab li.selected {
     background: orange;
 }
 

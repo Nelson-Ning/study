@@ -4,16 +4,16 @@
 }
 
 #menu li {
-      background:red;
-      list-style: none;
-      height: 40px;
-      width: 200px;
-      margin-bottom: 5px;
-      text-align: center;
-  }
+    background: red;
+    list-style: none;
+    height: 40px;
+    width: 200px;
+    margin-bottom: 5px;
+    text-align: center;
+}
 
-#menu a{
-    width:200px;
+#menu a {
+    width: 200px;
     height: 40px;
     text-decoration: none;
     display: block;
@@ -21,8 +21,8 @@
     color: white;
 }
 
-#menu a:hover{
-    background:yellow;
+#menu a:hover {
+    background: yellow;
 
 }
 

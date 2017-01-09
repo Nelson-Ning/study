@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>时钟</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul,ol{
+            list-style: none;
+        }
+        #clock{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000000;
+            border-radius: 50%;
+            margin: 100px auto;
+            position: relative;
+            transition:all 1s ease 0s;
+        }
+        #hour{
+            width: 6px;
+            height: 35px;
+            background: #000000;
+            position: absolute;
+            left: 97px;
+            top:65px;
+            -webkit-transform-origin: center 35px;
+            transition:all 1s ease 0s;
+        }
+        #minutes{
+            width: 4px;
+            height: 45px;
+            background: #00ff00;
+            position: absolute;
+            left:98px;
+            top:55px;
+            -webkit-transform-origin: center 45px;
+            transition:all 1s ease 0s;
+        }
+        #second{
+            width: 2px;
+            height: 55px;
+            background: #ff0000;
+            position: absolute;
+            left:99px;
+            top:45px;
+            -webkit-transform-origin: center 55px;
+        }
+        li{
+            width: 2px;
+            height: 4px;
+            background: #000;
+            position: absolute;
+            top:0;
+            left:99px;
+            -webkit-transform-origin: center 100px;
+        }
+        li:nth-child(5n+1){
+            height: 8px;
+        }
+    </style>
+</head>
+<body>
+        <div id="clock">
+        <div id="hour"></div>
+        <div id="minutes"></div>
+        <div id="second"></div>
+        <ul id="container">
+        </ul>
+        </div>
+         <script>
+          var oContainer=document.getElementById("container");
+          var oHour=document.getElementById("hour");
+          var oSecond=document.getElementById("second");
+          var oMinutes=document.getElementById("minutes");
+          var html='';
+          for(var i=0;i<60;i++) {
+              html+='<li style="-webkit-transform: rotate('+i*6+'deg)"></li>';
+                  }
+          console.log(html);
+          oContainer.innerHTML = html;
+           function run(){
+             var myDate=new Date();
+             var iSecond=myDate.getSeconds();
+             var iMinutes=myDate.getMinutes();
+             var iHour=myDate.getHours()+iMinutes/60;
+            oMinutes.style.webkitTransform='rotate('+iMinutes*6+'deg)';
+            oSecond.style.webkitTransform='rotate('+iSecond*6+'deg)';
+            oHour.style.webkitTransform='rotate('+iHour*30+'deg)';
+          }
+          run();
+             setInterval(function(){
+                  run();
+                   },1000);
+
+
+         </script>
+</body>
+</html>

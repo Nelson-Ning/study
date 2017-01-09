@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>滚动条</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        #text{
+            height: 600px;
+            position: absolute;
+            left: 0;
+            top:0;
+
+
+        }
+        #contioner{
+            top:50%;
+            left:50%;
+            margin-top:-300px;
+            margin-left: -150px;
+            height: 600px;
+            width: 300px;
+            position: absolute;
+            background: hotpink;
+            overflow: hidden;
+
+        }
+        #gundongtiao{
+            height: 80px;
+            width: 10px;
+            position: absolute;
+            background: goldenrod;
+            right: 0px;
+            top: 0px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="contioner">
+        <div id="text">
+                滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;
+                滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;
+                滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;
+                滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;
+                滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;
+                滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;
+                滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;
+                滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;
+                滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;
+                滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;
+                滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;
+                滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;
+                滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;
+                滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;
+                滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;
+                滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;
+                滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;
+                滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;
+                滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;
+                滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;
+                滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;
+                滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;
+                滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;
+                滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;
+                滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;
+                滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;
+                滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;
+                滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;
+                滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;滚动条test;
+        </div>
+    <div id="gundongtiao"></div>
+     <div id="gdt_bar"></div>
+        </div>
+<script>
+    (function(){
+        var ogdt=document.getElementById("gundongtiao");
+        var otxt=document.getElementById("text");
+        var oBar=document.getElementById("contioner");
+
+        ogdt.onmousedown=function(e) {
+        e = e || window.event;
+        var iDisY = e.clientY - ogdt.offsetTop
+        document.onmousemove=function(e){
+            e=e||window.event;
+            var iHigh=e.clientY-iDisY;
+            var fScaleY=iHigh/oBar.offsetHeight-ogdt.offsetHeight;
+
+            ogdt.style.top= iHigh+"px";
+            otxt.style.top=-fScaleY*(otxt.offsetHeight-oBar.offsetHeight)+"px";
+            console.log(iHigh);
+            if(iHigh<0){
+                ogdt.style.top=0+"px";
+            }
+            if(iHigh>otxt.offsetHeight-ogdt.offsetHeight){
+                ogdt.style.top=520+"px";
+            }
+             return false;
+        }
+        document.onmouseup=function() {
+            document.onmousemove = null;
+        }
+    }
+
+
+    })();
+
+
+
+
+
+</script>
+</body>
+</html>

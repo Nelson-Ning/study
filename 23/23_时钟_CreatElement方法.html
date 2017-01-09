@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>时钟</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul,ol{
+            list-style: none;
+        }
+        #clock{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000000;
+            border-radius: 50%;
+            margin: 100px auto;
+            position: relative;
+        }
+        #hour{
+            width: 6px;
+            height: 35px;
+            background: #000000;
+            position: absolute;
+            left: 97px;
+            top:65px;
+            -webkit-transform-origin: center 35px;
+        }
+        #minutes{
+            width: 4px;
+            height: 45px;
+            background: #00ff00;
+            position: absolute;
+            left:98px;
+            top:55px;
+            -webkit-transform-origin: center 45px;
+        }
+        #second{
+            width: 2px;
+            height: 55px;
+            background: #ff0000;
+            position: absolute;
+            left:99px;
+            top:45px;
+            -webkit-transform-origin: center 55px;
+        }
+        li{
+            width: 2px;
+            height: 4px;
+            background: #000;
+            position: absolute;
+            top:0;
+            left:99px;
+            -webkit-transform-origin: center 100px;
+        }
+        li:nth-child(5n+1){
+            height: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div id="clock">
+    <div id="hour"></div>
+    <div id="minutes"></div>
+    <div id="second"></div>
+    <ul id="container">
+    </ul>
+</div>
+    <script>
+        oContainer=document.getElementById('container');
+        for(var i=0;i<60;i++) {
+            var j=document.createElement('li');
+                  oContainer.appendChild(j);
+        }
+        aLi=oContainer.getElementsByTagName('li');
+        for(var j=0;j<60;j++) {
+            aLi[j].style.webkitTransform='rotate('+j*6+'deg)';
+        }
+
+
+    </script>
+</body>
+</html>

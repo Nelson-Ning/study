@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #000;
+            -webkit-perspective: 600px;
+        }
+
+        #container {
+            height: 200px;
+            width: 200px;
+            position: relative;
+            margin: 100px auto;
+            -webkit-transform-style: preserve-3d;
+            animation: run 2s linear infinite alternate-reverse;
+        }
+
+        #container div {
+            position: absolute;
+            height: 200px;
+            width: 200px;
+            background: rgba(255, 255, 255, 0.7);
+            font-size: 50px;
+            text-align: center;
+            line-height: 200px;
+            border-radius:10px;
+
+        }
+        @-webkit-keyframes run {
+            0%{
+
+            }
+            100%{
+                -webkit-transform: rotateY(360deg);
+            }
+        }
+        #one{
+            -webkit-transform: rotateX(90deg) translateZ(100px);
+        }
+        #six{
+            -webkit-transform: rotateX(-90deg) translateZ(100px);
+        }
+        #two{
+            -webkit-transform:translateZ(100px);
+            z-index: 1;
+        }
+        #three{
+            -webkit-transform: rotateY(90deg) translateZ(100px);
+        }
+        #five{
+            -webkit-transform: rotateY(-90deg) translateZ(100px);
+        }
+        #four{
+            -webkit-transform: rotateY(180deg) translateZ(100px);
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+<div id="container">
+    <div id="one">1</div>
+     <div id="two">2</div>
+      <div id="three">3</div>
+    <div id="four">4</div>
+    <div id="five">5</div>
+    <div id="six">6</div>
+
+</div>
+</body>
+</html>

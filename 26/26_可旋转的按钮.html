@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>可旋转的按钮</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            bottom:10px;
+            right:10px;
+        }
+        #container img{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            -webkit-transition:transform 1s ease ;
+
+        }
+    </style>
+</head>
+<body>
+   <div id="container">
+       <img class='menu' src="img/close.png">
+       <img class='menu' src="img/full.png">
+       <img class='menu' src="img/open.png">
+       <img class='menu' src="img/prev.png">
+       <img class='menu' src="img/refresh.png">
+       <img id='home' src="img/home.png">
+   </div>
+    <script>
+        var oHome=document.getElementById('home');
+        var aMenu=document.getElementsByClassName('menu');
+        var bFlag=false;
+        oHome.onclick=function(){
+            if(!bFlag){
+            this.style.webkitTransform='rotate(360deg)';
+            for(var i=0;i<aMenu.length;i++){
+                aMenu[i].index=i;
+                 var x = -180*Math.sin(22.5*i*Math.PI/180);
+                var y = -180*Math.cos(22.5*i*Math.PI/180);
+                aMenu[i].style.transform='translate('+x+'px,'+y+'px) rotate(360deg) scale(1)';
+                }
+            }
+            else{
+                this.style.webkitTransform='rotate(0deg)';
+                for(var i=0;i<aMenu.length;i++){
+                    aMenu[i].style.transform='translate(0px,0px) rotate(0deg) scale(1)';
+                }
+            }
+            bFlag=!bFlag;
+        }
+        for(var i=0;i<aMenu.length;i++){
+            aMenu[i].isClick=false;
+        aMenu[i].onclick=function(){
+            if(!this.isClick){
+                this.isClick=true;
+             var _this=this;
+            var Temp= this.style.webkitTransform;
+            setTimeout(function(){
+                 _this.style.webkitTransform= Temp;
+                _this.isClick=false;
+            },300);
+            this.style.webkitTransitionDuration='0.3s';
+            this.style.webkitTransform= Temp+'scale(1.5)';
+        }
+        }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+ <script>
+     var str = 'this is js code aaaaa d';
+     var arr = str.split(" ");
+     var max =arr[0].length;
+     var min =arr[0].length;
+     var maxword =arr[0];
+     var minword =arr[0];
+     console.log(arr);
+     for(var i=0;i<arr.length;i++) {
+         if (min > arr[i].length) {
+             min = arr[i].length;
+             minword = arr[i];
+
+         }
+         else {
+
+         max = arr[i].length;
+         maxword = arr[i];
+     }
+     }
+
+     console.log(max,maxword,min,minword);
+
+
+
+
+
+
+
+ </script>
+</body>
+</html>

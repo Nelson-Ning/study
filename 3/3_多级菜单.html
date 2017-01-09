@@ -11,55 +11,55 @@
     <li class="main-menu">
         <a href="#">link one</a>
         <ul class="sub-menu">
-        <li> <a href="#">menu one</a></li>
-        <li> <a href="#">menu two</a></li>
-        <li> <a href="#">menu three</a></li>
-    </ul>
+            <li><a href="#">menu one</a></li>
+            <li><a href="#">menu two</a></li>
+            <li><a href="#">menu three</a></li>
+        </ul>
     </li>
 
     <li class="main-menu">
         <a href="#">link two</a>
-    <ul class="sub-menu">
-        <li> <a href="#">menu one</a></li>
-        <li> <a href="#">menu two</a></li>
-        <li> <a href="#">menu three</a></li>
-    </ul>
+        <ul class="sub-menu">
+            <li><a href="#">menu one</a></li>
+            <li><a href="#">menu two</a></li>
+            <li><a href="#">menu three</a></li>
+        </ul>
     </li>
 
     <li class="main-menu">
         <a href="#">link three</a>
         <ul class="sub-menu">
-            <li> <a href="#">menu one</a></li>
-            <li> <a href="#">menu two</a></li>
-            <li> <a href="#">menu three</a></li>
+            <li><a href="#">menu one</a></li>
+            <li><a href="#">menu two</a></li>
+            <li><a href="#">menu three</a></li>
         </ul>
     </li>
 </ul>
 <script>
-/*    var oUl=document.getElementById("menu");
-    var aLi=oUl.getElementsByTagName("li");
-    for(var i=0;i<aLi.length;i++){
-        if(aLi[i].className=='main-menu'){
-            aLi[i].onmouseover=function(){
-                var oSubMenu =this.getElementsByTagName("ul")[0]
-                oSubMenu.style.display="block";
-            }
-            if(aLi[i].className=='main-menu'){
-                aLi[i].onmouseout=function(){
-                    var oSubMenu =this.getElementsByTagName("ul")[0]
-                    oSubMenu.style.display="none";
-                }
- }}}第一种方法*/
-    var oUl=document.getElementById("menu");
-    var aLi=oUl.children;
-    for(var i=0;i<aLi.length;i++){
-        aLi[i].onmouseover=function(){
-            var oSubMenu =this.children[1]
-            oSubMenu.style.display="block";
+    /*    var oUl=document.getElementById("menu");
+     var aLi=oUl.getElementsByTagName("li");
+     for(var i=0;i<aLi.length;i++){
+     if(aLi[i].className=='main-menu'){
+     aLi[i].onmouseover=function(){
+     var oSubMenu =this.getElementsByTagName("ul")[0]
+     oSubMenu.style.display="block";
+     }
+     if(aLi[i].className=='main-menu'){
+     aLi[i].onmouseout=function(){
+     var oSubMenu =this.getElementsByTagName("ul")[0]
+     oSubMenu.style.display="none";
+     }
+     }}}第一种方法*/
+    var oUl = document.getElementById("menu");
+    var aLi = oUl.children;
+    for (var i = 0; i < aLi.length; i++) {
+        aLi[i].onmouseover = function () {
+            var oSubMenu = this.children[1]
+            oSubMenu.style.display = "block";
         }
-        aLi[i].onmouseout=function(){
-            var oSubMenu =this.children[1]
-            oSubMenu.style.display="none";
+        aLi[i].onmouseout = function () {
+            var oSubMenu = this.children[1]
+            oSubMenu.style.display = "none";
         }
 
     }

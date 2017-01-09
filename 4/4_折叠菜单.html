@@ -8,7 +8,7 @@
 <body>
 <ul id="menu">
     <li class="main_menu">
-        <h3>Llink1</h3>
+        <h3 onselectstart="return false">Llink1</h3>
         <ul class="sub_menu">
             <li><a href="#">link one</a></li>
             <li><a href="#">link two</a></li>
@@ -16,7 +16,7 @@
            </ul>
     </li>
     <li class="main_menu">
-        <h3>Llink2</h3>
+        <h3 onselectstart="return false">Llink2</h3>
         <ul class="sub_menu">
             <li><a href="#">link one</a></li>
             <li><a href="#">link two</a></li>
@@ -27,12 +27,14 @@
 </ul>
 
 <script>
-       /*
-       * 2016年10月23日14:01:03
-       * 通过父节点寻找孙子节点
-       * */
+
         var oUl=document.getElementById('menu');
         var aH3=oUl.getElementsByTagName('h3');
+         /**
+         * 2016年10月23日14:01:03
+         * 通过父节点寻找孙子节点
+         * **/
+
 /*        for(var i=0;i<aH3.length;i++){
             aH3[i].onclick=function(){
                 if( this.parentNode.children[1].style.display=='block')
@@ -41,6 +43,11 @@
                     this.parentNode.children[1].style.display='block'
             }
         }*/
+
+        /*
+         * 2016年10月23日 14:37:17
+         * 通过next函数
+         * */
         for(var i=0;i<aH3.length;i++){
             aH3[i].onclick=function(){
                 if(next(this).style.display=='block')
@@ -57,6 +64,8 @@
                }while(elem && elem.nodeType!=1);
                 return elem;
         }
+
+
 
 </script>
 </body>
