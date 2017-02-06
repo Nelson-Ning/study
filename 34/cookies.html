@@ -11,6 +11,8 @@
             if(day){
                 var date=new Date();
                 date.setDate(date.getDate()+day);
+
+
                 str += 'expires='+date;
             }
             document.cookie=str;
