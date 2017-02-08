@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <form action="" method="post" id="regForm">
+    <fieldset>
+        <legend>个人基本信息</legend>
+        <div>
+            <label  for="username">名称:</label>
+            <input id="username" type="text" value="名称" />
+        </div>
+        <div>
+            <label for="pass">密码:</label>
+            <input id="pass" type="password" value="密码"/>
+        </div>
+        <div>
+            <label for="msg">详细信息:</label>
+            <textarea id="msg" rows="2" cols="20">详细信息</textarea>
+        </div>
+
+    </fieldset>
+</form>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script>
+        $(function(){
+            $(':input').on('focus',function(){
+                $(this).css('background','pink');
+                if($(this).val() == $(this)[0].defaultValue){
+                     $(this).val("");
+                }
+            }).on('blur',function(){
+                $(this).css('background','white');
+                if($(this).val() == ""){
+                    $(this).val($(this)[0].defaultValue);
+                }
+            })
+        });
+    </script>
+</body>
+</html>
