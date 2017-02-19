@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网上商城实例</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul,li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        #InputSearch{
+            color: #999999;
+            position: absolute;
+            top:20px;
+            left: 200px;
+        }
+        .container{
+            width: 100%;
+        }
+        .header{
+            width: 100%;
+            height: 105px;
+            background: #EEEEEE;
+        }
+        .header-box{
+            width: 990px;
+            height: 105px;
+            margin: 0 auto;
+
+        }
+        .header-top{
+            height: 68px;
+            position: relative;
+
+        }
+        .header-bottom{
+            height: 37px;
+            background: #ccc;
+            background:#444444;
+        }
+        .content{
+            height: 580px;
+            width:  990px;
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+        .side{
+            width: 185px;
+            height: 100%;
+            float: left;
+            border: 1px solid ;
+        }
+        .content-box{
+            height: 321px;
+            float: left;
+            width:803px ;
+        }
+       .c-left{
+           height: 321px;
+           width: 550px;
+
+           float: left;
+           margin: 0 11px;
+           position: relative;
+           overflow: hidden;
+       }
+        .c-right{
+            height: 321px;
+            width: 230px;
+            float: right;
+        }
+        .bottom{
+            width: 790px;
+            height: 230px;
+            float: left;
+            margin: 15px 0 0 10px;
+            overflow: hidden;
+            position: relative;
+         }
+        #skin{
+            position: absolute;
+            right: 10px;
+            top:20px;
+        }
+        #skin>li{
+            float: left;
+            margin-right: 4px;
+            width: 15px;
+            height: 15px;
+            overflow: hidden;
+            display: block;
+            cursor: pointer;
+            background-image:url("img/theme.gif");
+            text-indent: -9999px;
+        }
+        #skin_0 { background-position:0px 0px; }
+        #skin_1 { background-position:15px 0px; }
+        #skin_2 { background-position:35px 0px; }
+        #skin_3 { background-position:55px 0px; }
+        #skin_4 { background-position:75px 0px; }
+        #skin_5 { background-position:95px 0px; }
+        #skin_0.selected { background-position:0px 15px; }
+        #skin_1.selected { background-position:15px 15px; }
+        #skin_2.selected { background-position:35px 15px; }
+        #skin_3.selected { background-position:55px 15px; }
+        #skin_4.selected { background-position:75px 15px; }
+        #skin_5.selected { background-position:95px 15px; }
+        .nav>li{
+            float: left;
+            margin-right: 30px;
+        }
+        .nav{
+            height: 37px;
+            text-align: center;
+            line-height: 37px;
+            margin-left: 30px;
+        }
+        .nav>li>a{
+            color: white;
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .side>h2{
+            height: 30px;
+            line-height: 30px;
+            color: #fff;
+            font-size: 12px;
+            text-indent: 13px;
+            background: #000;
+        }
+        h3{
+            height: 30px;
+            line-height: 30px;
+            color:#476B2E;
+            font-size: 12px;
+            text-indent: 13px;
+            margin-top: 7px;
+        }
+        .sideinfo_tips{
+            margin:2px 0 0 10px;
+        }
+        .sideinfo_tips>li{
+            width: 181px;
+            height: 20px;
+
+        }
+        .sideinfo_tips>li>a{
+            height: 20px;
+            color:#476B2E;
+            font-size: 10px;
+        }
+        .sideinfo>li{
+            display: inline-block;
+            width: 79px;
+            height: 24px;
+            line-height: 24px;
+            text-indent: 13px;
+            position: relative;
+        }
+        .sideinfo>li>a{
+            height: 24px;
+            color:#476B2E;
+            font-size: 10px;
+        }
+        .sideinfo>li>a.promoted{
+            color: red;
+        }
+        .c-right>img{
+            transition: 1s all;
+            
+        }
+        .c-right>img:hover{
+            transform: rotate(360deg);
+        }
+        .c-left>ul>li{
+            width: 109px;
+            height: 42px;
+            float: left;
+            background: #777777;
+            margin-right: 1px;
+            opacity: 0.8;
+
+        }
+        .c-left span{
+            margin-top: 5px;
+            text-align: center;
+            color: white;
+            font-size: 11px;
+            display: block;
+        }
+        .c-left-ul{
+            position: absolute;
+            bottom: 0px;
+        }
+        .c-left>img{
+            overflow: hidden;
+        }
+       
+        .bottom>div>ul>li{
+            color: black;
+            font-size: 10px;
+            height: 20px;
+            width: 44px;
+            text-align: center;
+            line-height: 20px;
+            display: inline-block;
+            background: #CCCCCC;
+            margin: 0 5px 0 0;
+           float: left;
+
+        }
+       .bottom_name{
+           position: absolute;
+           right: 0;
+           top: 10px;
+       }
+
+        .bottomTab{
+            width: 100%;
+            height: 30px;
+            position: relative;
+            border-bottom: 1px solid #E4E4E4;
+        }
+        .bottomTab_list{
+            overflow: hidden;
+            width: 3200px;
+            height: 188px;
+            position: relative;
+            transition: 1s all;
+        }
+        .bottomTab_list ul{
+
+        }
+        .bottomTab_list img{
+            margin: 7px;
+            float: left;
+            width: 183px;
+            height: 164px;
+        }
+        .footer{
+            margin: 0 auto;
+            width: 990px;
+            color: #666666;
+            padding: 18px 0;
+            text-align: center;
+        }
+        .hot{
+
+            background: url("img/hot.gif") no-repeat scroll 0 0 transparent;
+            height: 16px;
+            position: absolute;
+            top: 0;
+            width: 21px;
+        }
+        .c-left>ul>li.chos{
+            background: red;
+        }
+        #JS_imgWrap img{
+            display: none;
+            background: #000;
+        }
+        .bottom_name>li.chos{
+            background: #E44072;
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div class="header-box">
+            <div class="header-top">
+                <img src="img/logo.gif" style="margin-left: 10px">
+                <input type="text" value="请输入商品名称" id="InputSearch" >
+                <ul id="skin">
+                    <li id="skin_0" class="selected">蓝色</li>
+                    <li id="skin_1">紫色</li>
+                    <li id="skin_2">红色</li>
+                    <li id="skin_3">天蓝色</li>
+                    <li id="skin_4">橙色</li>
+                    <li id="skin_5">淡绿色</li>
+                </ul>
+            </div>
+            <div class="header-bottom">
+                    <ul class="nav">
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">品牌</a></li>
+                        <li><a href="#">女装</a></li>
+                        <li><a href="#">男鞋</a></li>
+                        <li><a href="#">鞋包服饰</a></li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="side">
+            <h2>商品分类</h2>
+            <h3>推荐品牌</h3>
+            <hr>
+            <ul class="sideinfo">
+            <li><a href="#nogo" >耐克</a></li>
+            <li><a href="#nogo" class="promoted">阿迪达斯</a></li>
+            <li><a href="#nogo" >达芙妮</a></li>
+            <li><a href="#nogo" >李宁</a></li>
+            <li><a href="#nogo" >安踏</a></li>
+            <li><a href="#nogo" >奥康</a></li>
+            <li><a href="#nogo" class="promoted">骆驼</a></li>
+            <li><a href="#nogo" >特步</a></li>
+            </ul>
+            <h3>女装</h3>
+            <hr>
+            <ul class="sideinfo">
+            <li><a href="#nogo" >呢大衣</a></li>
+            <li><a href="#nogo" >T恤</a></li>
+            <li><a href="#nogo" >羽绒</a></li>
+            <li><a href="#nogo" >衬衫</a></li>
+            <li><a href="#nogo" >羊绒衫</a></li>
+            <li><a href="#nogo" >针织</a></li>
+            <li><a href="#nogo" >连衣裙</a></li>
+            <li><a href="#nogo" >皮外套</a></li>
+            </ul>
+            <h3>男装</h3>
+            <hr>
+                <ul class="sideinfo">
+            <li><a href="#nogo" >衬衫</a></li>
+            <li><a href="#nogo" >T恤衫</a></li>
+            <li><a href="#nogo" >夹克</a></li>
+            <li><a href="#nogo" >大皮衣</a></li>
+            <li><a href="#nogo" >风衣</a></li>
+            <li><a href="#nogo" >牛仔裤</a></li>
+            <li><a href="#nogo" >西服</a></li>
+            <li><a href="#nogo" >卫衣</a></li>
+                </ul>
+            <h3>鞋包配饰</h3>
+            <hr>
+                    <ul class="sideinfo">
+            <li><a href="#nogo" >围巾</a></li>
+            <li><a href="#nogo" >旅行箱</a></li>
+            <li><a href="#nogo" >真皮包</a></li>
+            <li><a href="#nogo" >韩版</a></li>
+            <li><a href="#nogo" >达芙妮</a></li>
+            <li><a href="#nogo" >单肩包</a></li>
+            <li><a href="#nogo" >毛线</a></li>
+            <li><a href="#nogo" >清仓靴子</a></li>
+                        </ul>
+
+        </div>
+        <div class="content-box">
+            <div class="top">
+                <div class="c-left">
+                    <a href="#nogo" id="JS_imgWrap">
+                        <img src="../45/images/ads/1.jpg" style="display: inline" alt="相约情人节"/>
+                        <img src="../45/images/ads/2.jpg" alt="新款上线"/>
+                        <img src="../45/images/ads/3.jpg" alt="愤怒小鸟特卖"/>
+                        <img src="../45/images/ads/4.jpg" alt="男鞋促销第一波"/>
+                        <img src="../45/images/ads/5.jpg" alt="春季新品发布"/>
+                    </a>
+                    <ul class="c-left-ul">
+                        <li class="chos"><a href="#"><span>相约情人节</span><span>全场119元起</span></a></li>
+                        <li><a href="#"><span>新款上线</span><span>全场357元起</span></a></li>
+                        <li><a href="#"><span>愤怒小鸟特卖</span><span>全场89元</span></a></li>
+                        <li><a href="#"><span>男鞋促销第一波</span><span>全场3.1折起</span></a></li>
+                        <li><a href="#"><span>春季新品发布</span><span>全场4.1折起</span></a></li>
+                    </ul>
+                </div>
+                <div class="c-right">
+                    <img src="img/20120216.jpg">
+                    <div class="c-tips" style="border: 1px solid #CCCCCC;margin-top: 5px">
+                        <h3 title="最新动态" style="margin-top:1px">最新动态</h3>
+                        <hr>
+                        <ul class="sideinfo_tips">
+                            <li><a href="###1" class="tooltip" title="[活动] 伊伴春鞋迎春大促">[活动] 伊伴春鞋迎春大促</a></li>
+                            <li><a href="###2" class="tooltip" title="[活动] 千百度冬靴新品火热让利">[活动] 千百度冬靴新品火热让利</a></li>
+                            <li><a href="###3" class="tooltip" title="[活动] COEY秋冬新品全场2.3折起">[活动] COEY秋冬新品全场2.3折起</a></li>
+                            <li><a href="###4" class="tooltip" title="[活动] 伊伴春鞋迎春大促">[活动] 伊伴春鞋迎春大促</a></li>
+                            <li><a href="###5" class="tooltip" title="[活动] 千百度冬靴新品火热让利">[活动] 千百度冬靴新品火热让利</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="bottomTab">
+                <h3 title="品牌活动" style="float: left;">品牌活动</h3>
+                <ul class="bottom_name">
+                    <li class="chos"><a href="#">运动</a></li>
+                    <li><a href="#">女鞋</a></li>
+                    <li><a href="#">男鞋</a></li>
+                    <li><a href="#">童鞋</a></li>
+                </ul>
+                    <div class="bottomTab_list">
+                        <ul>
+                            <li><a href="#"><img src="img/20120217.jpg" alt=""/></a></li>
+                            <li><a href="#"><img src="img/20120218.jpg" alt=""/></a></li>
+                            <li><a href="#"><img src="img/20120219.png" alt=""/></a></li>
+                            <li><a href="#"><img src="img/20120220.png" alt=""/></a></li>
+                            <li><a href="#"><img src="img/20120217.jpg" alt=""/></a></li>
+                            <li><a href="#"><img src="img/20120218.jpg" alt=""/></a></li>
+                            <li><a href="#"><img src="img/20120219.png" alt=""/></a></li>
+                            <li><a href="#"><img src="img/20120220.png" alt=""/></a></li>
+                            <li><a href="#"><img src="img/20120217.jpg" alt=""/></a></li>
+                            <li><a href="#"><img src="img/20120218.jpg" alt=""/></a></li>
+                            <li><a href="#"><img src="img/20120219.png" alt=""/></a></li>
+                            <li><a href="#"><img src="img/20120220.png" alt=""/></a></li>
+                            <li><a href="#"><img src="img/20120217.jpg" alt=""/></a></li>
+                            <li><a href="#"><img src="img/20120218.jpg" alt=""/></a></li>
+                            <li><a href="#"><img src="img/20120219.png" alt=""/></a></li>
+                            <li><a href="#"><img src="img/20120220.png" alt=""/></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        Copyright © 2009 - 2012 JaneShop Inc.
+    </div>
+
+</div>
+    <script src="../40/js/jquery-1.12.4.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+</html>
