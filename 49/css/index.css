@@ -1,0 +1,60 @@
+
+.pic_tag{
+    position: absolute;
+    right:10px;
+    bottom:10px;
+    list-style: none;
+    margin:0px;
+}
+.pic_tag li{
+    float: left;
+    width: 20px;
+    height:20px;
+    background: #000;
+    color:#fff;
+    cursor: pointer;
+    margin-right: 5px;
+    line-height: 20px;
+    text-align: center;
+}
+.pic_tag li.circle{
+    border-radius: 50%;
+}
+
+.pic_container{
+    width: 444px;
+    height:250px;
+    margin:100px auto;
+    position: relative;
+}
+.pic_content img{
+    display: none;
+}
+.pic_content img.selected{
+    display: block;
+}
+.pic_tag li.selected{
+    background: #ff6600;
+}
+.selected{
+    display: block;
+}
+.pic_arrow{
+    position: absolute;
+    left:10px;
+    bottom:10px;
+}
+.pic_arrow span{
+    width: 20px;
+    height: 20px;
+    float: left;
+    background: #000;
+    color:#fff;
+    margin-right: 5px;
+    line-height: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.pic_arrow span:hover{
+    background: #ff6600;
+}

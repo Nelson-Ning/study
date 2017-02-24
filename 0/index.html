@@ -4,42 +4,163 @@
     <meta charset="UTF-8">
     <title>NelSon简历开发中</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/player.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/skill.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/onepage-scroll.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <div class="header">
-        <div class="container">
-            <div class="logo">
-                <img src="img/logo.png">
-            </div>
-            <div class="nav">
-                <ul>
-                    <li><a href="#">主  页 | Home</a></li>
-                    <li><a href="#">关于我 | About</a></li>
-                    <li><a href="#">技  能 | Skills</a></li>
-                    <li><a href="#">项  目 | Project</a></li>
-                    <li><a href="#">联系我 | Contact</a></li>
-                </ul>
-            </div>
+<div class="header">
+    <div class="container">
+        <div class="logo">
+            <a href="#"><img src="img/logo.png"></a>
+        </div>
+        <div class="player">
+            <!--autoplay-->
+            <audio src="mp3/music.mp3" preload="auto" controls></audio>
+        </div>
+        <div class="nav">
+            <ul>
+                <li class="selected"><a href="#">主  页 | Home</a></li>
+                <li><a href="#">关于我 | About</a></li>
+                <li><a href="#">技  能 | Skills</a></li>
+                <li><a href="#">项  目 | Project</a></li>
+                <li><a href="#">联系我 | Contact</a></li>
+            </ul>
         </div>
     </div>
-    <div class="banner">
-        <div class="container">
-            <div class="banner-info">
-                <div class="banner-img">
-                    <img src="img/banner-in.jpg">
-                </div>
-                <div class="banner-text">
-                    <h1>WEB DEVELOPER</h1>
-                    <h2>前端工程师求职简历</h2>
-                    <a href="#">下载我的简历</a>
-                    <a href="http://www.github.com/Nelson-Ning">GitHub</a>
+</div>
+    <div class="scroll">
+        <section><div class="home main">
+            <div class="banner main">
+                <div class="container">
+                    <div class="banner-info">
+                        <div class="banner-img">
+                            <img src="img/banner-in.jpg">
+                        </div>
+                        <div class="banner-text">
+                            <h1>WEB DEVELOPER</h1>
+                            <h2>前端工程师求职简历</h2>
+                            <a href="#">下载我的简历</a>
+                            <a href="http://www.github.com/Nelson-Ning">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="banner-right">
+                        <ul class="banner-right-list">
+                            <li><img src="img/iconfont-学历.png"><span>本科</span></li>
+                            <li><img src="img/年龄.png"><span>21岁</span></li>
+                            <li><img src="img/坐标3.png"><span>哈尔滨</span></li>
+                            <li><img src="img/状态.png"><span>在读</span></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
+        </div></section>
+        <section><div class="about main">
+            <div class="container">
+                <div class="content">
+                    <h2 class="nav_title">ABOUT ME</h2>
+                    <span class="nav_span"></span>
+                    <div class="about-grids">
+                        <div class="about-grids-left">
+                            <h3>王永宁</h3>
+                            <span>黑龙江大学   软件工程   本科在读</span>
+                            <p>自我学习能力还是比较强的，想做的事很特别认真。专业知识扎实，有积极的工作态度，能够独立工作，又有团队精神。具有良好的文化素质，从小到大一直被人用“创新”二字概括，有出色的领导力和前端的良好基础。
+                                我正在寻找一个更好的发展平台，希望能够充分发挥自己的优势，共同努力成就一番事业。</p>
+                        </div>
+                        <div class="about-grids-right">
+                            <ul>
+                                <li><img src="img/html.png" alt=""/></li>
+                                <li><img src="img/css.png" alt=""/></li>
+                                <li><img src="img/javascript.png" alt=""/></li>
+                                <li><img src="img/jquery插件库.png" alt=""/></li>
+                                <li><img src="img/Node.js.png" alt=""/></li>
+                                <li><img src="img/php.png" alt=""/></li>
+                                <li><img src="img/database-sql.png" alt=""/></li>
+                                <li><img src="img/react.png" alt=""/></li>
+                                <li><img src="img/ps2.png" alt=""/></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div></section>
+        <section><div class="skill main">
+            <div class="container">
+                <div class="content">
+                    <h2>精通前端，涉猎后端</h2>
+                    <h3>寻找实习工作，实现能力提升</h3>
+                    <ul class="skill_list">
+                        <li class="skill_list_JavaScript">JavaScript</li>
+                        <li class="skill_list_HTML_CSS">HTML&CSS</li>
+                        <li class="skill_list_PHP">PHP</li>
+                        <li class="skill_list_Node_js">Node.js</li>
+                        <li class="skill_list_SQL">SQL</li>
+                        <li class="skill_list_PhotoShop">PhotoShop</li>
+                    </ul>
+                </div>
+            </div>
+        </div></section>
+        <section><div class="project main">
+            <div class="container">
+                <div class="content">项目展示区</div>
+            </div>
+        </div></section>
+        <section> <div class="contact main">
+            <div class="container">
+                <div class="content">
+                    <h2 class="nav_title">CONTACT</h2>
+                    <span class="nav_span"></span>
+                    <div class="contact_left">
+                        <h3>Say hi to me</h3>
+                        <div class="stripb"></div>
+                        <ul class="callme">
+                            <li class="phone"><img src="img/手机.png"><h3>15114620199</h3></li>
+                            <li class="wechat"><img src="img/微信.png"><h3>soul0331</h3></li>
+                            <li class="weibo"><img src="img/微博.png"><h3>NelSon_宁</h3></li>
+                            <li class="address"><img src="img/坐标3.png"><h4>黑龙江省哈尔滨市南岗区学府路74号黑龙江大学</h4></li>
 
+                        </ul>
+
+                    </div>
+                    <div class="contact_right">
+                        <h3>Drop me a line</h3>
+                        <div class="stripb"></div>
+
+                            <input type="text" id="name" class="form_name" placeholder="Name">
+                            <input type="text" id="e_mail" class="form_e-main" placeholder="E-mail">
+                            <textarea type="text" id="content" class="textarea" placeholder="Message"></textarea>
+                            <input type="submit" value="SEND" class="btn" >
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="footer_link">
+                    <a href="#">知乎</a>
+                    <a href="#">微博</a>
+                    <a href="#">GitHub</a>
+                    <a href="#" style=" border-right:none">站长工具</a>
+                </div>
+                <div class="footer_others">
+                <p>All Rights Reserved </p>
+                <p>黑ICP备XXXXXXXX号 Copyright © 2016 - 2017</p>
+                </div>
+            </div>
+        </div></section>
 
     </div>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/audioplayer.js"></script>
+    <script src="js/initaudio.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/toolbar.js"></script>
+    <script src="js/jquery.onepage-scroll.min.js"></script>
+    <script src="js/scroll.js"></script>
 </body>
 </html>

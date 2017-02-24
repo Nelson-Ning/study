@@ -9,92 +9,23 @@ ul,li{
     list-style: none;
 }
 html, body {
+    height: 100%;
     font-size: 100%;
     font-family: 'Open Sans', sans-serif;
 }
-.header{
+.main{
     width: 100%;
-    height: 100px;
-    background: #000;
-}
-.logo{
-    width: 96px;
-    height: 96px;
-    position: absolute;
+    height: 100%;
 }
 .container{
+    height: 87%;
     width: 970px;
     margin: 0 auto;
     position: relative;
 }
-.nav{
-    position: absolute;
-    top:50px;
-    right: 0px;
-}
-.nav li{
-    display: inline-block;
-    float: left;
-    margin: 0 12px;
-    padding:5px;
-    border-bottom: 2px solid rgba(212, 212, 212, 0.7);
-}
-.nav a{
-    color: white;
-    font-size: 14px;
-    font-weight: 200;
-}
-.banner{
-    background: #2c58ed;
-    position: relative;
-    height: 538px;
-}
-.banner-img img{
-    width: 480px;
-    height: 420px;
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    margin-left: -240px;
-}
-.banner-info{
-    height: 538px;
-}
-.banner-text{
-    position: absolute;
-    left: 0;
-    bottom: 15%;
-}
-.banner-text h2 {
-    font-size: 1.3em;
-    color: #fff;
-    margin: 13px 0 23px;
-    font-style: italic;
-    border-top: 3px solid#fff;
-    width: 73%;
-    padding-top: 10px;
-    font-weight: 100;
-}
-.banner-text h1 {
-    font-size: 2.6em;
-    color: #fff;
-    margin: 0;;
-}
-.banner-text a{
-    font-size: 15px;
-    display: block;
-    width: 180px;
-    height: 43px;
-    background: #fff;
-    text-align: center;
-    line-height: 43px;
-    margin-top: 10px;
-    transition:0.5s;
-}
-.banner-text a:hover {
-    background: #999;
-    transition-property: transform;
-    transition-duration: 0.5s;
-    transition-timing-function: ease-out;
-}
+
+
+
+
+
 
