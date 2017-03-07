@@ -1,0 +1,65 @@
+.project_Carousel{
+    width: 100%;
+    height: 468px;
+    background: #CCCCCC;
+    position: relative;
+}
+.project_btn{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    z-index: 999;
+}
+.project_btn li{
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: black;
+    margin-right: 5px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    z-index: 999;
+}
+.project_Carousel img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    z-index: 0;
+}
+.project_arrow{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    cursor: pointer;
+    z-index: 999;
+}
+.project_Carousel span{
+    float: left;
+    background: black;
+    text-align: center;
+    color: white;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+}
+li.btn_selected{
+    background: orange;
+    z-index: 999;
+}
+span.btn_selected{text-align: center;
+    font-weight: normal;
+    font-size: 40px;
+    width: 100%;
+    margin-top: 10px;
+    background: orange;
+    z-index: 999;
+}
+.project_title{
+    margin:10px;
+    font-family: 'Microsoft JhengHei', 'Microsoft YaHei', 'STHeiti SC', 'SimHei';
+    font-weight: normal;
+    font-size: 15px;
+    width: 100%;
+}

@@ -1,8 +1,10 @@
 .footer{
     width: 100%;
-    height: 20%;
+    height: 70px;
     background: #2c58ed;
-    position: relative;
+    position: absolute;
+    bottom: 0px;
+    display: none;
 }
 .footer_link,.footer_others{
     width: 100%;
@@ -10,14 +12,14 @@
 }
 .footer_link{
     position: absolute;
-    top:10px;
+    top:3px;
 }
 .footer_others{
     position: absolute;
-    top:33px;
+    top:30px;
 }
 .footer_link a{
-    font-size: 10px;
+    font-size: 12px;
     padding: 0px 8px;
     color: white;
     border-right: 0.5px solid #000000;

@@ -16,6 +16,7 @@ $(function(){
                     add_selected(index);
                     break;
                 case 3:
+                    add_selected(index);
                     $(".skill_list_JavaScript").animate({
                         width:'90%',
                     },2500);
@@ -34,14 +35,18 @@ $(function(){
                     $(".skill_list_PhotoShop").animate({
                         width:'45%',
                     },2500);
-                    add_selected(index);
                     break;
                 case 4:
                     add_selected(index);
                     break;
                 case 5:
                     add_selected(index);
+                    $('.footer').slideDown();
+
                     break;
+            }
+            if(index!=5){
+                $('.footer').css('display','none');
             }
         }
 

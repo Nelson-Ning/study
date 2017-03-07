@@ -1,4 +1,4 @@
-/*ÑùÊ½ÖØÖÃ*/
+/*æ ·å¼é‡ç½®*/
 *{
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@ a{
 img{
     border: 0;
 }
-/*¹«¹²ÑùÊ½*/
+/*å…¬å…±æ ·å¼*/
 .wrapper{
     padding: 0 22px;
     max-width: 980px;
@@ -37,7 +37,7 @@ img{
 #nav-header{
     display: none;
 }
-/*Ê¹ÓÃtext-align: justifyÀ´ÊµÏÖÁ½¶Ë¶ÔÆëĞ§¹û*/
+/*ä½¿ç”¨text-align: justifyæ¥å®ç°ä¸¤ç«¯å¯¹é½æ•ˆæœ*/
 /*#nav-list{
     text-align: justify;
 }
@@ -64,7 +64,7 @@ img{
     background: url(../img/bag.svg) no-repeat;
 }
 
-/*Ã½Ìå²éÑ¯*/
+/*åª’ä½“æŸ¥è¯¢*/
 @media  screen and ( max-width: 767px){
     #nav-header{
         display: -webkit-box;
@@ -77,3 +77,4 @@ img{
 
     }
 }
+

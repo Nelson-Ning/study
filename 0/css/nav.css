@@ -1,12 +1,11 @@
 .nav_title{
     font-weight: 900;
     color: #595959;
-    font-size: 2.3em;
     text-align: center;
 }
 .nav_span{
      width: 8%;
-     margin: 0px auto;
+     margin: 15px auto;
      background: #D8D8D8;
      display: block;
      height: 7px;
@@ -14,7 +13,7 @@
 .player{
       width: 200px;
       position: absolute;
-      bottom: 0px;
+      bottom: 20px;
       left: 120px;
 }
 .header{
@@ -27,6 +26,12 @@
      height: 70px;
      background: #060505;
  }
+.header_container{
+    width: 970px;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
 .nav{
       position: absolute;
       top:25px;
@@ -41,15 +46,16 @@
 }
 .nav a{
      color: white;
-     font-size: 5px;
+     font-size: 12px;
      font-weight: 100;
+     webkit-text-size-adjust: none;
  }
 .selected{
       border-top: 2px solid rgba(212, 212, 212, 0.7);
 }
 .logo img{
     width: 80px;
-    height: 80px;
+    height: 100%;
     position: absolute;
     border-radius: 50%;
     -webkit-transform-origin: center bottom;

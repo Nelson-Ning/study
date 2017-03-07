@@ -16,12 +16,29 @@ html, body {
 .main{
     width: 100%;
     height: 100%;
+    position: relative;
 }
 .container{
-    height: 87%;
+    position: absolute;
+    bottom: 0;
+    height: 100%;
     width: 970px;
-    margin: 0 auto;
-    position: relative;
+    left: 50%;
+    margin-left: -485px;
+}
+.content{
+   position: absolute;
+    top: 50%;
+    margin-top: -230px;
+    width: 100%;
+    height: 600px;
+}
+@media (max-width: 970px) {
+    .container{
+        width: 100%;
+        left:0;
+        margin-left:0;
+    }
 }
 
 
